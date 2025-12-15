@@ -4,9 +4,34 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Barbie Girls The Reboot</title>
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        background: url("BG.png") no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      #unity-canvas {
+        width: 1280px;
+        height: 720px;
+      }
+    </style>
   </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" width=1280 height=720 style="width: 1280px; height: 720px; background: #231F20"></canvas>
+
+  <body>
+    <canvas id="unity-canvas" width="1280" height="720"></canvas>
+
     <script src="Build/zgk592i.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -17,8 +42,6 @@
         companyName: "DefaultCompany",
         productName: "Barbie Girls The Reboot",
         productVersion: "0.1",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
   </body>
